@@ -1,0 +1,111 @@
+---
+layout: layout.njk
+title: "All Mini Split Services Near You | Same Day Available"
+description: "All mini split services near you — emergency repair, installation, cleaning, refrigerant recharge, not cooling fix, heat pump repair, multi-zone installation, ductless AC service, maintenance plans & more. Call (877) 739-2492 for same day service."
+canonical: "https://www.minisplitlocalpro.com/services/"
+---
+
+{# ── Service Icon Map ──────────────────────────────────────────────────── #}
+{% set serviceIcons = {
+  'emergency-mini-split-repair': 'ph-siren',
+  'mini-split-installation': 'ph-wrench',
+  'mini-split-repair': 'ph-gear',
+  'mini-split-cleaning': 'ph-broom',
+  'mini-split-refrigerant-recharge': 'ph-snowflake',
+  'mini-split-not-cooling': 'ph-thermometer-cold',
+  'mini-split-not-heating': 'ph-thermometer-hot',
+  'multi-zone-mini-split': 'ph-house-line',
+  'commercial-mini-split': 'ph-buildings',
+  'mini-split-maintenance': 'ph-clipboard-text',
+  'mini-split-replacement': 'ph-arrows-counter-clockwise',
+  'ductless-ac-services': 'ph-wind'
+} %}
+
+{# ── Breadcrumb ────────────────────────────────────────────────────────── #}
+<div class="breadcrumb-bar">
+  <div class="container">
+    <div class="bc-inner">
+      <i class="ph ph-house" style="font-size:13px"></i>
+      <a href="/">Home</a>
+      <span class="bc-sep">›</span>
+      <span>Our Services</span>
+    </div>
+  </div>
+</div>
+
+{# ── Banner ────────────────────────────────────────────────────────────── #}
+<div class="rs-banner">
+  <div class="container">
+    <div class="banner-row">
+      <div class="banner-content-col">
+        <div class="banner-content">
+          <div class="sub-label">
+            <i class="ph ph-snowflake" style="font-size:12px"></i>
+            All Services
+          </div>
+          <h1 class="title">
+            All Mini Split Services <span>Near You</span>
+          </h1>
+          <p class="description">
+            {{ site.BRAND }} connects you with complete ductless cooling and heating solutions. From late-night 
+            emergencies and full system replacements to refrigerant leak detection, deep coil cleanings, 
+            multi-zone configuration, and commercial maintenance plans. Fast and reliable service nationwide.
+          </p>
+          <div class="btn-part">
+            <a class="readon orange" href="{{ site.PHONE_HREF }}">
+              <i class="ph ph-phone-call" style="font-size:17px"></i>
+              {{ site.PHONE }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ── Services Grid ─────────────────────────────────────────────────────── #}
+<div class="rs-services">
+  <div class="container">
+    <h2>Complete Ductless Mini Split Services Near You</h2>
+    <div class="services-row">
+      {% for svc in services %}
+      <div class="services-slider">
+        <div class="services-item">
+          <a href="/services/{{ svc.slug }}/" class="card-link" aria-label="View {{ svc.title }}"></a>
+          <div class="services-icon-bar">
+            <div class="svc-icon">
+              <i class="ph {{ serviceIcons[svc.slug] or 'ph-snowflake' }}"></i>
+            </div>
+          </div>
+          <div class="services-content">
+            <h3 class="title">
+              <a href="/services/{{ svc.slug }}/">{{ svc.title }}</a>
+            </h3>
+            <p class="description">{{ svc.description }}</p>
+            <div class="services-btn">
+              <a href="{{ site.PHONE_HREF }}">
+                <span class="btn-text">Get Quotes</span>
+                <span class="arrow-icon">
+                  <i class="ph ph-arrow-right" style="font-size:12px"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{# ── CTA Strip ─────────────────────────────────────────────────────────── #}
+<div class="cta-strip">
+  <div class="container">
+    <h2>Need Mini Split Service Today? Call Now — Same Day Available</h2>
+    <p>Our certified local HVAC technicians are standing by for same day and emergency service.</p>
+    <a class="readon orange" href="{{ site.PHONE_HREF }}">
+      <i class="ph ph-phone-call" style="font-size:18px"></i>
+      {{ site.PHONE }} — Free Estimate
+    </a>
+  </div>
+</div>

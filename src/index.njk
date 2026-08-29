@@ -1,0 +1,224 @@
+---
+layout: layout.njk
+title: "Mini Split Local Pros | Same Day Ductless AC Service"
+description: "Expert mini split services near you — same day service available. Mini Split Local Pros provides emergency mini split repair, installation, cleaning, refrigerant recharge, not cooling fix, heat pump repair, multi-zone installation, ductless AC service, commercial mini split, maintenance plans & more. Call (877) 739-2492."
+canonical: "https://www.minisplitlocalpro.com/"
+---
+
+{# ── JSON-LD Schemas ────────────────────────────────────────────────────── #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.BRAND }}",
+  "url": "{{ site.DOMAIN }}/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.DOMAIN }}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.BRAND }}",
+  "url": "{{ site.DOMAIN }}/",
+  "logo": "{{ site.DOMAIN }}/favicon.svg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ site.PHONE }}",
+    "contactType": "customer service",
+    "areaServed": "US",
+    "availableLanguage": "en"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.DOMAIN }}/" }
+  ]
+}
+</script>
+
+{# ── Service Icon Map ──────────────────────────────────────────────────── #}
+{% set serviceIcons = {
+  'emergency-mini-split-repair': 'ph-siren',
+  'mini-split-installation': 'ph-wrench',
+  'mini-split-repair': 'ph-gear',
+  'mini-split-cleaning': 'ph-broom',
+  'mini-split-refrigerant-recharge': 'ph-snowflake',
+  'mini-split-not-cooling': 'ph-thermometer-cold',
+  'mini-split-not-heating': 'ph-thermometer-hot',
+  'multi-zone-mini-split': 'ph-house-line',
+  'commercial-mini-split': 'ph-buildings',
+  'mini-split-maintenance': 'ph-clipboard-text',
+  'mini-split-replacement': 'ph-arrows-counter-clockwise',
+  'ductless-ac-services': 'ph-wind'
+} %}
+
+{# ── Banner ────────────────────────────────────────────────────────────── #}
+<div class="rs-banner">
+  <div class="container">
+    <div class="banner-row">
+      <div class="banner-content-col">
+        <div class="banner-content">
+          <div class="sub-label">
+            <i class="ph ph-snowflake" style="font-size:12px"></i>
+            Mini Split Local Pros
+          </div>
+          <h1 class="title">
+            Expert Mini Split Services <span>Near You</span>
+          </h1>
+          <p class="description">
+            {{ site.BRAND }} instantly connects you to top-rated ductless HVAC specialists nationwide. 
+            We provide rapid dispatch for urgent repairs, full system installations, advanced diagnostics, 
+            refrigerant leak fixes, and routine tune-ups. Available 24/7 for all your mini split needs!
+          </p>
+          <div class="btn-part">
+            <a class="readon orange" href="{{ site.PHONE_HREF }}">
+              <i class="ph ph-phone-call" style="font-size:17px"></i>
+              {{ site.PHONE }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="banner-img-box">
+        <img
+          src="/images/mini-split-hero.webp"
+          alt="Professional mini split ductless air conditioner service near you"
+          loading="eager"
+        >
+        <div class="banner-badge">
+          <div class="big">24/7</div>
+          <div class="small">Emergency</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ── Counter ───────────────────────────────────────────────────────────── #}
+<div class="rs-counter">
+  <div class="container">
+    <div class="counter-grid">
+      <div class="counter-list">
+        <div class="counter-text">
+          <div class="counter-icon"><i class="ph ph-users-three" style="font-size:26px;color:#fff"></i></div>
+          <div class="counter-number">
+            <div class="count-row"><span class="rs-count">10,000</span><span class="prefix">+</span></div>
+            <h5 class="title">Certified Technicians</h5>
+          </div>
+        </div>
+      </div>
+      <div class="counter-list">
+        <div class="counter-text">
+          <div class="counter-icon"><i class="ph ph-snowflake" style="font-size:26px;color:#fff"></i></div>
+          <div class="counter-number">
+            <div class="count-row"><span class="rs-count">250,000</span><span class="prefix">+</span></div>
+            <h5 class="title">Systems Serviced</h5>
+          </div>
+        </div>
+      </div>
+      <div class="counter-list">
+        <div class="counter-text">
+          <div class="counter-icon"><i class="ph ph-star" style="font-size:26px;color:#fff"></i></div>
+          <div class="counter-number">
+            <div class="count-row"><span class="rs-count">50,000</span><span class="prefix">+</span></div>
+            <h5 class="title">5 Star Reviews</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ── Services Grid ─────────────────────────────────────────────────────── #}
+<div class="rs-services">
+  <div class="container">
+    <h2>Professional Ductless Mini Split Services Near You</h2>
+    <div class="services-row">
+      {% for svc in services %}
+      <div class="services-slider">
+        <div class="services-item">
+          <a href="/services/{{ svc.slug }}/" class="card-link" aria-label="View {{ svc.title }}"></a>
+          <div class="services-icon-bar">
+            <div class="svc-icon">
+              <i class="ph {{ serviceIcons[svc.slug] or 'ph-snowflake' }}"></i>
+            </div>
+          </div>
+          <div class="services-content">
+            <h3 class="title">
+              <a href="/services/{{ svc.slug }}/">{{ svc.title }} Near You</a>
+            </h3>
+            <p class="description">
+              Looking for {{ svc.title | lower }} near you? Contact {{ site.BRAND }} at
+              {{ site.PHONE }} for professional services. {{ svc.description.split('.')[0] }}.
+            </p>
+            <div class="services-btn">
+              <a href="{{ site.PHONE_HREF }}">
+                <span class="btn-text">Get Quotes</span>
+                <span class="arrow-icon">
+                  <i class="ph ph-arrow-right" style="font-size:12px"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{# ── States / USA Map ──────────────────────────────────────────────────── #}
+<div class="rs-addon-services">
+  <div class="container">
+    <h2>
+      <i class="ph ph-map-trifold" style="font-size:28px;color:var(--primary);margin-right:8px;vertical-align:middle"></i>
+      Mini Split Services Available Nationwide
+    </h2>
+
+    <div class="interactive-usa-map">
+      {% include "usa-map.njk" %}
+    </div>
+
+    <div class="addon-row">
+      {% for st in states %}
+      <a href="/{{ st.slug }}/" class="addon-item" style="text-decoration:none">
+        <div class="services-text">
+          <div class="services-title">
+            <i class="ph ph-map-pin" style="font-size:13px;color:var(--primary);flex-shrink:0"></i>
+            <h3>{{ st.name }}</h3>
+          </div>
+          <div class="location-meta">
+            <i class="ph ph-buildings" style="font-size:11px"></i>
+            {{ st.abbr }} · {{ st.cities.length }} cities
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{# ── CTA Strip ─────────────────────────────────────────────────────────── #}
+<div class="cta-strip">
+  <div class="container">
+    <h2>Need Mini Split Service Today? Call Now — Same Day Available</h2>
+    <p>Our certified local HVAC technicians are standing by for same day and emergency mini split service.</p>
+    <a class="readon orange" href="{{ site.PHONE_HREF }}">
+      <i class="ph ph-phone-call" style="font-size:18px"></i>
+      {{ site.PHONE }} — Free Estimate
+    </a>
+  </div>
+</div>
+
+<script>
+  localStorage.removeItem('userLoc');
+</script>
+
