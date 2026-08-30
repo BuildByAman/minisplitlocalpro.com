@@ -4,15 +4,15 @@ export function getWhyChoosePool(city, state, brand) {
 
   return [
     {
-      p1: `When you choose ${brand} for your ductless HVAC needs in ${loc}, you're partnering with certified mini split specialists. Unlike general HVAC companies, our technicians train extensively on ductless technology. This specialized expertise allows us to accurately diagnose complex error codes, resolve obscure refrigerant leaks, and correctly calibrate multi-zone communication boards on the first visit.`,
-      p2: `We understand that a failing AC or heat pump is a major disruption. That's why we stock our service vehicles with the most common sensors, control boards, and refrigerant types for Mitsubishi, Daikin, LG, and Fujitsu systems. Our goal is to provide same-day resolutions, transparent upfront pricing, and a completely stress-free experience from start to finish.`
+      p1: `When you choose ${brand} for mini split service in ${loc}, you're partnering with certified mini split repair specialists. Unlike general HVAC companies, our technicians train extensively on ductless technology. This specialized expertise allows us to accurately diagnose complex error codes, resolve obscure refrigerant leaks, and correctly calibrate multi-zone communication boards on the first visit.`,
+      p2: `We understand that a failing AC or heat pump is a major disruption. That's why we stock our service vehicles with the most common sensors, control boards, and refrigerant types for Mitsubishi, Daikin, LG, and Fujitsu systems. Our goal is to provide same-day mini split repair, transparent upfront pricing, and a completely stress-free experience from start to finish.`
     },
     {
       p1: `At ${brand}, we believe that quality service in ${loc} shouldn't come with hidden surprises. We provide clear, written estimates before any repair or installation begins. Our technicians use state-of-the-art diagnostic equipment to pinpoint the exact cause of your system's failure â€” whether it's a frozen indoor coil, a failing outdoor compressor, or a simple clogged condensate drain.`,
       p2: `We back every service call with an ironclad satisfaction guarantee and comprehensive warranties on all new parts and equipment. When you invite our team into your home, you can expect punctuality, respect, and a clean workspace. We always use drop cloths and wear shoe covers to protect your property.`
     },
     {
-      p1: `What sets ${brand} apart in ${loc} is our 24/7 dedication to our customers. Mini split emergencies don't stick to business hours. If your heat pump fails during a winter freeze or your ductless AC stops cooling during a summer heatwave, our rapid-response emergency team is always ready to dispatch.`,
+      p1: `What sets ${brand} apart in ${loc} is our 24/7 dedication to our customers and superior mini split service. Mini split emergencies don't stick to business hours. If your heat pump fails during a winter freeze or your ductless AC stops cooling during a summer heatwave, our rapid-response emergency mini split repair team is always ready to dispatch.`,
       p2: `We pride ourselves on doing the job right the first time. We don't just patch symptoms; we address the root cause of the system failure. If your unit is low on refrigerant, we use advanced electronic leak detectors to find and seal the leak before recharging the system, ensuring your investment is protected and operating at peak efficiency.`
     },
     {

@@ -113,10 +113,10 @@ eleventyComputed:
             Mini Split Repair in <span>{{ item.city.name }}, {{ item.state.abbr }}</span> | {{ titleSuffix }}
           </h1>
           <p class="description">
-            Searching for a trusted ductless AC specialist in {{ item.city.name }}, <a href="/{{ item.state.slug }}/" style="color:#0ea5e9;text-decoration:none;font-weight:600">{{ item.state.name }}</a>? Call {{ site.BRAND }} at
-            {{ site.PHONE }} for rapid assistance. From <a href="/services/emergency-mini-split-repair/" style="color:#0ea5e9;text-decoration:none;font-weight:600">urgent repairs</a> and
-            <a href="/services/mini-split-installation/" style="color:#0ea5e9;text-decoration:none;font-weight:600">new installations</a>, to <a href="/services/mini-split-refrigerant-recharge/" style="color:#0ea5e9;text-decoration:none;font-weight:600">Freon recharges</a>,
-            thorough cleanings, and complex multi-zone setups — our local network covers 
+            Looking for expert mini split repair in {{ item.city.name }}, <a href="/{{ item.state.slug }}/" style="color:#0ea5e9;text-decoration:none;font-weight:600">{{ item.state.name }}</a>? Reach {{ site.BRAND }} at
+            {{ site.PHONE }} for rapid assistance. From <a href="/services/emergency-mini-split-repair/" style="color:#0ea5e9;text-decoration:none;font-weight:600">emergency service</a> and
+            <a href="/services/mini-split-installation/" style="color:#0ea5e9;text-decoration:none;font-weight:600">new ductless setups</a>, to <a href="/services/mini-split-refrigerant-recharge/" style="color:#0ea5e9;text-decoration:none;font-weight:600">Freon recharges</a>,
+            deep cleanings, and advanced multi-zone fixes — our local network delivers premier mini split service in 
             {{ item.city.name }}{% if item.city.county %}, {{ item.city.county }} County{% endif %} around the clock.
           </p>
           <div class="btn-part">
@@ -228,33 +228,33 @@ eleventyComputed:
           
           {% if contentVariation == 0 %}
           <p>
-            Welcome to {{ site.BRAND }}, your trusted local ductless AC experts in {{ item.city.name }}, {{ item.state.name }}.
+            Welcome to {{ site.BRAND }}, your premier destination for mini split repair in {{ item.city.name }}, {{ item.state.name }}.
             Whether your mini split is leaking water, blowing warm air, flashing error codes,
-            or completely dead — our certified HVAC technicians arrive fast, diagnose the
-            problem, and fix it right the first time.
+            or completely dead — our certified HVAC specialists arrive fast, diagnose the
+            problem, and deliver flawless mini split service.
           </p>
           <p>
-            {{ localClimateText }} We offer same day service and 24/7 emergency response
+            {{ localClimateText }} We provide same day mini split repair and 24/7 response
             so you never have to suffer in an uncomfortable home.
           </p>
           {% elif contentVariation == 1 %}
           <p>
-            When you need reliable ductless mini split service in {{ item.city.name }}, {{ site.BRAND }} is the team to call.
-            We provide fast, professional HVAC service to homeowners and businesses
+            When you need reliable mini split service in {{ item.city.name }}, {{ site.BRAND }} is the team to call.
+            We deliver expert mini split repair to homeowners and local businesses
             throughout {{ item.city.name }} and the surrounding {{ item.state.name }} communities.
           </p>
           <p>
             {{ localClimateText }} Our certified technicians use advanced diagnostic tools to pinpoint
-            and resolve any mini split problem quickly and affordably.
+            and resolve your HVAC issue via guaranteed mini split repair.
           </p>
           {% else %}
           <p>
-            At {{ site.BRAND }}, our local HVAC experts are dedicated to helping {{ item.city.name }}
-            residents resolve mini split issues quickly and permanently. We handle everything
-            from a simple filter cleaning to a full multi-zone system replacement.
+            At {{ site.BRAND }}, our local HVAC pros are dedicated to providing {{ item.city.name }}
+            residents with fast and permanent mini split repair. We handle everything
+            from a simple filter cleaning to a complete multi-zone mini split service.
           </p>
           <p>
-            {{ localClimateText }} Call {{ site.PHONE }} now for a free estimate and same day service
+            {{ localClimateText }} Call {{ site.PHONE }} now for an expert mini split repair estimate
             in {{ item.city.name }}, {{ item.state.abbr }}.
           </p>
           {% endif %}

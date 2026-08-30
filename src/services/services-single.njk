@@ -6,8 +6,8 @@ pagination:
   alias: service
 permalink: "services/{{ service.slug }}/index.html"
 eleventyComputed:
-  title: "{{ service.title }} Near You | Same Day Service | Mini Split Local Pros"
-  description: "{{ service.title }} near you. Call {{ site.PHONE }} for professional and reliable local mini split services. Same day available."
+  title: "{{ service.title }} Near You | Mini Split Repair | {{ site.BRAND }}"
+  description: "{{ service.title }} near you. Call {{ site.PHONE }} for professional and reliable local mini split repair and service. Same day available."
   canonical: "{{ site.DOMAIN }}/services/{{ service.slug }}/"
 ---
 
@@ -40,7 +40,7 @@ eleventyComputed:
           </h1>
           <p class="description" id="svcBannerDesc">
             {{ service.description }} At {{ site.BRAND }}, our certified HVAC technicians are standing by for
-            same day service and 24/7 emergency response.
+            expert mini split repair and 24/7 emergency mini split service.
           </p>
           <div class="btn-part">
             <a class="readon orange" href="{{ site.PHONE_HREF }}">
@@ -71,7 +71,7 @@ eleventyComputed:
           <h2>Expert {{ service.title }} <span id="svcLocH2">Near You</span></h2>
           <p>
             When you need {{ service.title | lower }} near you,
-            {{ site.BRAND }} provides industry-leading expertise and rapid response. Mini split
+            {{ site.BRAND }} provides industry-leading expertise and rapid mini split repair. Ductless
             problems can escalate quickly if left untreated, leading to costly system failures
             and discomfort. Explore all of our
             <a href="/services/" id="svcAllLink" style="color:var(--primary);text-decoration:underline">professional mini split services</a>.
