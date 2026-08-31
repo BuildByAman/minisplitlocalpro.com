@@ -3,6 +3,6 @@ export default {
   PHONE: '(877) 739-2492',
   PHONE_HREF: 'tel:+18777392492',
   BRAND: 'Mini Split Local Pros',
-  DOMAIN: 'https://www.minisplitlocalpro.com',
+  DOMAIN: 'https://minisplitlocalpro.com',
   YEAR: new Date().getFullYear(),
 };

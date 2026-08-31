@@ -7,7 +7,7 @@ const require = createRequire(import.meta.url);
 const states = require('../data/states.js').default;
 const services = require('../data/services.js').default;
 
-const DOMAIN = 'https://www.minisplitlocalpro.com';
+const DOMAIN = 'https://minisplitlocalpro.com';
 const today = new Date().toISOString().split('T')[0];
 
 const urls = [];
