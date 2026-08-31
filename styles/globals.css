@@ -1078,8 +1078,8 @@ ph { display: inline-flex; align-items: center; }
   .readon { font-size: 17px !important; padding: 16px 28px !important; }
   .services-title h3 { font-size: 17px !important; }
   .location-meta { font-size: 14px !important; }
-  .banner-row { grid-template-columns: 1fr; }
-  .banner-img-box { display: none; }
+  .banner-row { grid-template-columns: 1fr; gap: 40px; }
+  .banner-img-box { display: block; margin-top: 10px; }
   .rs-banner { padding: 54px 0 46px; }
   .services-row { grid-template-columns: 1fr; }
   .addon-row { grid-template-columns: repeat(2, 1fr); }
@@ -1099,9 +1099,16 @@ ph { display: inline-flex; align-items: center; }
   .rs-services { padding: 56px 0; }
   .rs-addon-services { padding: 56px 0; }
   .rs-faq { padding: 56px 0; }
+  .float-phone {
+    width: 48px;
+    height: 48px;
+    bottom: 16px;
+    right: 16px;
+    font-size: 22px;
+  }
 }
 @media (max-width: 480px) {
-  .addon-row { grid-template-columns: repeat(2, 1fr); }
+  .addon-row { grid-template-columns: 1fr; }
   .container { padding: 0 16px; }
   .counter-list { padding: 20px 16px; }
   .testi-grid { grid-template-columns: 1fr; }
