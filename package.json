@@ -7,7 +7,8 @@
     "build": "node scripts/build.js",
     "dev": "node --max-old-space-size=8192 node_modules/@11ty/eleventy/cmd.cjs --serve --incremental",
     "start": "node --max-old-space-size=8192 node_modules/@11ty/eleventy/cmd.cjs --serve",
-    "preview": "npx serve _site"
+    "preview": "npx serve _site",
+    "indexnow": "node scripts/submit-indexnow.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
