@@ -162,8 +162,8 @@ eleventyComputed:
       <div class="services-slider">
         <div class="services-item">
           <a href="/services/{{ svc.slug }}/" class="card-link" aria-label="View {{ svc.title }}"></a>
-          <div class="services-img" style="height: 180px; overflow: hidden; position: relative; z-index: 2; pointer-events: none;">
-            <img src="/images/{{ svc.image }}" alt="{{ svc.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" class="svc-card-img">
+          <div class="services-img">
+            <img src="/images/{{ svc.image }}" alt="{{ svc.title }}" width="400" height="250" loading="lazy" class="svc-card-img">
           </div>
           <div class="services-icon-bar">
             <div class="svc-icon">
@@ -199,7 +199,7 @@ eleventyComputed:
   <div class="container">
     <div class="choose-grid">
       <div class="choose-img">
-        <img src="/images/mini-split-outdoor.webp" alt="Professional mini split HVAC technicians in {{ state.name }} equipped with top-tier tools for residential and commercial ductless service." loading="lazy">
+        <img src="/images/mini-split-outdoor.webp" alt="Professional mini split HVAC technicians in {{ state.name }} equipped with top-tier tools for residential and commercial ductless service." width="580" height="400" loading="lazy">
       </div>
       <div>
         <div class="sec-title4">
@@ -242,7 +242,7 @@ eleventyComputed:
     </h2>
     <div class="faq-grid">
       <div class="faq-img">
-        <img src="/images/mini-split-installation.webp" alt="Frequently asked mini split questions in {{ state.name }}. Certified HVAC technicians answering your ductless AC repair and installation questions." loading="lazy">
+        <img src="/images/mini-split-installation.webp" alt="Frequently asked mini split questions in {{ state.name }}. Certified HVAC technicians answering your ductless AC repair and installation questions." width="580" height="400" loading="lazy">
       </div>
       <div class="accordion" itemscope itemtype="https://schema.org/FAQPage">
         {% for faq in faqs %}

@@ -72,8 +72,8 @@ canonical: "https://minisplitlocalpro.com/services/"
       <div class="services-slider">
         <div class="services-item">
           <a href="/services/{{ svc.slug }}/" class="card-link" aria-label="View {{ svc.title }}"></a>
-          <div class="services-img" style="height: 180px; overflow: hidden; position: relative; z-index: 2; pointer-events: none;">
-            <img src="/images/{{ svc.image }}" alt="{{ svc.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" class="svc-card-img">
+          <div class="services-img">
+            <img src="/images/{{ svc.image }}" alt="{{ svc.title }}" width="400" height="250" loading="lazy" class="svc-card-img">
           </div>
           <div class="services-icon-bar">
             <div class="svc-icon">

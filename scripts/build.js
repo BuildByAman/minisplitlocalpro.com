@@ -13,6 +13,8 @@ if (fs.existsSync(siteDir)) {
 
 const states = statesData.map(s => s.slug).sort();
 
+import CleanCSS from "clean-css";
+
 console.log(`🏗️  BUILDING BASE PAGES...`);
 let startTime = Date.now();
 try {
@@ -21,8 +23,17 @@ try {
         stdio: "ignore" 
     });
     console.log(`✅ Base pages built in ${((Date.now() - startTime) / 1000).toFixed(2)} seconds.\n`);
+
+    // Minify CSS in _site/css/globals.css
+    const cssPath = path.join(siteDir, "css", "globals.css");
+    if (fs.existsSync(cssPath)) {
+        const rawCss = fs.readFileSync(cssPath, "utf8");
+        const minified = new CleanCSS({ level: 2 }).minify(rawCss).styles;
+        fs.writeFileSync(cssPath, minified, "utf8");
+        console.log(`✨ Minified globals.css (${(rawCss.length / 1024).toFixed(1)} KB -> ${(minified.length / 1024).toFixed(1)} KB)\n`);
+    }
 } catch (error) {
-    console.error(`❌ Build failed for Base Pages. Exiting.`);
+    console.error(`❌ Build failed for Base Pages. Exiting.`, error);
     process.exit(1);
 }
 

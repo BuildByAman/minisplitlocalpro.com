@@ -42,7 +42,9 @@ export default function (eleventyConfig) {
       let minified = await minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true
       });
       return minified;
     }

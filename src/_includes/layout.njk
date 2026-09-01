@@ -25,8 +25,19 @@
   <meta name="twitter:description" content="{{ description if description else 'Professional mini split services near you. Emergency repair, installation, cleaning, refrigerant recharge, not cooling fixes, heat pump repair & more. Call 24/7.' }}">
   <meta name="twitter:image" content="{{ site.DOMAIN }}/images/mini-split-hero.webp">
 
-  {# Phosphor Icons preconnect #}
-  <link rel="preconnect" href="https://unpkg.com">
+  {# Fonts & Resource Preconnects #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+  {# Preload LCP Hero Image for immediate discovery #}
+  <link rel="preload" as="image" href="/images/mini-split-hero.webp" fetchpriority="high">
+
+  {# Google Fonts (Poppins) with swap #}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap">
+
+  {# Phosphor Icons CSS Font (Zero JS overhead, prevents CLS & forced reflow) #}
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 
   {# Stylesheet #}
   <link rel="stylesheet" href="/css/globals.css">
@@ -187,8 +198,7 @@
   <i class="ph ph-phone-call" style="font-size:24px;color:#fff"></i>
 </a>
 
-{# ── Phosphor Icons CDN ──────────────────────────────────────────────── #}
-<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
 
 {# ── Mobile Menu Script ──────────────────────────────────────────────── #}
 <script>
