@@ -10,6 +10,14 @@ const siteDir = path.join(process.cwd(), "_site");
 if (fs.existsSync(siteDir)) {
     fs.rmSync(siteDir, { recursive: true, force: true });
 }
+fs.mkdirSync(siteDir, { recursive: true });
+
+// Copy all static files from public/ directly to _site/
+const publicDir = path.join(process.cwd(), "public");
+if (fs.existsSync(publicDir)) {
+    fs.cpSync(publicDir, siteDir, { recursive: true });
+    console.log("📁 Synced public/ folder directly to _site/");
+}
 
 const states = statesData.map(s => s.slug).sort();
 
