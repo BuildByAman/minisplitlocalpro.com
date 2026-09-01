@@ -42,6 +42,25 @@ for (let i = 0; i < urls.length; i += BATCH_SIZE) {
 console.log(`📦 Split into ${batches.length} batch(es) of max 10,000 URLs.\n`);
 
 async function submitBatches() {
+  console.log(`🔍 Verifying if IndexNow key is live at: ${KEY_LOCATION}...`);
+  try {
+    const keyCheck = await fetch(KEY_LOCATION);
+    if (!keyCheck.ok) {
+      console.warn(`⏳ Key file is not live yet (HTTP ${keyCheck.status}).`);
+      console.warn(`👉 Cloudflare Pages is still building/deploying your changes. Please wait 1-2 minutes and re-run "npm run indexnow"!\n`);
+      return;
+    }
+    const keyText = (await keyCheck.text()).trim();
+    if (keyText !== KEY) {
+      console.warn(`⚠️ Key content mismatch. Expected "${KEY}", got "${keyText}".`);
+      return;
+    }
+    console.log(`✅ Key verified live on your site! Proceeding with Bing IndexNow submission...\n`);
+  } catch (err) {
+    console.error("❌ Failed to reach key file:", err.message);
+    return;
+  }
+
   for (let i = 0; i < batches.length; i++) {
     const batch = batches[i];
     console.log(`🚀 Submitting Batch ${i + 1}/${batches.length} (${batch.length} URLs) to Bing IndexNow...`);
