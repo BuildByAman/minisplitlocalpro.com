@@ -6,8 +6,8 @@ pagination:
   alias: item
 permalink: "/{{ item.state.slug }}/{{ item.city.slug }}/index.html"
 eleventyComputed:
-  title: "Mini Split Repair in {{ item.city.name }}, {{ item.state.abbr }} | {{ titleSuffix }} | {{ site.BRAND }}"
-  description: "Mini Split Repair in {{ item.city.name }}, {{ item.state.abbr }} — same day available. {{ site.BRAND }} provides emergency mini split repair, installation, cleaning, refrigerant recharge, not cooling fix, heat pump repair & more. Call {{ site.PHONE }}."
+  title: "Mini Split Repair in {{ item.city.name }}, {{ item.state.abbr }} | Same Day Service"
+  description: "24/7 mini split repair in {{ item.city.name }}, {{ item.state.abbr }}. Same day emergency ductless AC fix, install, cleaning & recharge. Call {{ site.PHONE }}."
   canonical: "{{ site.DOMAIN }}/{{ item.state.slug }}/{{ item.city.slug }}/"
   stateSlug: "{{ item.state.slug }}"
   citySlug: "{{ item.city.slug }}"
