@@ -2,7 +2,7 @@ import statesData from "../data/states.js";
 import servicesData from "../data/services.js";
 
 const DOMAIN = "minisplitlocalpro.com";
-const KEY = "e7f849b291034f71a0678d49281a94ef";
+const KEY = "7c58aae19a164eafa7c620f6cde32dff";
 const KEY_LOCATION = `https://${DOMAIN}/${KEY}.txt`;
 
 console.log("⚡ Gathering all URLs for Bing IndexNow Fast Indexing...\n");
