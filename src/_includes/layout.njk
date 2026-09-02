@@ -33,11 +33,19 @@
   {# Preload LCP Hero Image for immediate discovery #}
   <link rel="preload" as="image" href="/images/mini-split-hero.webp" fetchpriority="high">
 
-  {# Google Fonts (Poppins) with swap #}
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap">
+  {# Non-blocking Google Fonts (Poppins) #}
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap">
+  </noscript>
 
-  {# Phosphor Icons CSS Font (Zero JS overhead, prevents CLS & forced reflow) #}
-  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  {# Non-blocking Phosphor Icons CSS Font #}
+  <link rel="preload" as="style" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  </noscript>
 
   {# Stylesheet #}
   <link rel="stylesheet" href="/css/globals.css">
